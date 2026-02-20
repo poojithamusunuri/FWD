@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Adherence Monitoring System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Rule Adherence Monitoring System</h1>
+    <p>Structured monitoring of rule adherence across shared institutional facilities</p>
+</header>
+
+<main>
+
+<section class="form-section">
+    <h2>Record Entry</h2>
+
+    <form id="ruleForm">
+
+        <label>Facility</label>
+        <select id="facility">
+            <option value="">Select Facility</option>
+            <option>Laboratory</option>
+            <option>Library</option>
+            <option>Hostel</option>
+            <option>Academic Block</option>
+            <option>Residential Block</option>
+            <option>Sports Complex</option>
+            <option>Research Center</option>
+        </select>
+
+        <label>Rule Description</label>
+        <input type="text" id="rule" placeholder="Enter observed rule">
+
+        <label>Status</label>
+        <select id="status">
+            <option value="">Select Status</option>
+            <option>Followed</option>
+            <option>Violated</option>
+        </select>
+
+        <label>Date</label>
+        <input type="date" id="date">
+
+        <button type="button" onclick="addRecord()">Add Record</button>
+
+    </form>
+</section>
+
+
+<section class="controls-section">
+    <h2>Controls</h2>
+
+    <button onclick="showRecords()">Show All</button>
+    <button onclick="undoLast()">Undo Last</button>
+
+    <input type="text" id="searchInput" placeholder="Search rule or facility">
+    <button onclick="searchRecord()">Search</button>
+
+</section>
+
+
+<section class="table-section">
+    <h2>Recorded Data</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Facility</th>
+                <th>Rule</th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+
+        <tbody id="recordsTable"></tbody>
+    </table>
+</section>
+
+</main>
+
+<footer>
+    Academic Data Structures Project • Frontend Interface
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
